@@ -1,16 +1,16 @@
 import App from "../components/App";
 import { connect } from "react-redux";
 
-// action creator を読み込む
 import { minus, plus } from "../actions";
 
 const mapStateToProps = state => {
   return {
-    number: state
+    number: state.number,
+    day: state.day,
+    title: state.title
   };
 };
 
-// action creator を使用
 const mapDispatchToProps = dispatch => {
   return {
     plus: num => {
